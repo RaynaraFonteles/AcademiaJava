@@ -20,6 +20,8 @@ APIs para Logging:
 - tinylog https://www.tinylog.org/
 - SLF4J https://www.slf4j.org/
 
+-----------------------------------------------------------------------------------------------------------------------------------------
+
 Debugging: Possibilita a execução do código linha a linha, facilitando o entendimento e ajudando a encontrar bugs.
 
 Ferramentas da IDE:
@@ -29,8 +31,9 @@ Ferramentas da IDE:
 - Step over (F6): Executa a linha onde o cursor está, porém, escapa de chamadas de métodos e laço de repetição, por exemplo;
 - Skip All Breakpoints (ctrl + alt + B): Desabilita todos os breakpoints do seu projeto. Para reativar é só clicar novamente no botão, ou usar as teclas de atalho.
 
-- Profiling:
-É usado para descrever o processo de medição do tempo de execução dos métodos, para que assim possamos localizar e corrigir gargalos de desempenho.
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Profiling: É usado para descrever o processo de medição do tempo de execução dos métodos, para que assim possamos localizar e corrigir gargalos de desempenho.
 
 Razões para usarmos os profilers:
 1. Investigar o uso do heap e a frequência que está ocorrendo a coleta de lixo;
