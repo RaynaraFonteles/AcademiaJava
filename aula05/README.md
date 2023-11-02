@@ -1,9 +1,9 @@
 # Aula 05 - Controle de Versão
 
-- O que é Controle de Versão?
+O que é Controle de Versão?
 Controle de versão, é um sistema que registra as mudanças feitas em arquivos, usado principalmente em códigos.
 
-- Por que usar o Controle de Versão?
+Por que usar o Controle de Versão?
 O controle de versão oferece uma série de vantagens para o desenvolvimento de software, a gestão de documentos e outras atividades que envolvem a criação e modificação de arquivos ao longo do tempo. Rastreabilidade, Colaboração, Backup, etc...
 
 Tipos de sistemas de controle de versão:
