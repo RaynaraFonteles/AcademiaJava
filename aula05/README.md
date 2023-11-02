@@ -22,6 +22,8 @@ Windows: https://gitforwindows.org/;
 2. Configuração inicial (identidade, editor):
 git config --global user.name "Seu nome" git config --global user.email "seuemail@example.com"
 
+----------------------------------------------------------------------------------------------------------------------------------------
+
 Fundamentos do GIT:
 1. Inicializando o repositório: git init;
 2. Rastreando e comprometendo mudanças: git add & git commit;
