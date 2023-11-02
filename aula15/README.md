@@ -35,12 +35,11 @@ Uma dependência pode ser categorizada de duas maneiras: SNAPSHOT e RELEASE.
 
 Escopos de Dependências:
 Cada dependência Maven pode ser categorizada em 5 escopos diferentes.
-compile: este é o escopo padrão se nenhum for especificado. As dependências de tempo de compilação estão disponíveis no classpath do projeto;
-provided: Semelhante ao escopo compile, mas indica que o JDK ou o contêiner subjacente fornecerá a dependência no tempo de execução. A dependência estará disponível no momento da compilação, mas não empacotada no artefato;
-runtime: as dependências definidas com este escopo estarão disponíveis apenas em tempo de execução, mas não em tempo de compilação. Um exemplo de uso: Imagine se você estiver usando o driver MySQL dentro do seu projeto, você pode adicionar a dependência com escopo como tempo de execução, para garantir que a abstração da API JDBC seja usada em vez da API do driver MySQL durante a implementação. Se o código-fonte incluir qualquer classe que faça parte da API JDBC do MySQL, o código não será compilado, pois a dependência não está disponível no momento da compilação;
-test: as dependências estão disponíveis apenas no momento da execução dos testes, exemplos típicos incluem Junit;
-system: é semelhante ao escopo provided, mas a única diferença é que precisamos mencionar explicitamente onde a dependência pode ser encontrada no sistema, usando a tag systemPath:
-<systemPath>${basedir}/lib/some-dependency.jar</systemPath>.
+- compile: este é o escopo padrão se nenhum for especificado. As dependências de tempo de compilação estão disponíveis no classpath do projeto;
+- provided: Semelhante ao escopo compile, mas indica que o JDK ou o contêiner subjacente fornecerá a dependência no tempo de execução. A dependência estará disponível no momento da compilação, mas não empacotada no artefato;
+- runtime: as dependências definidas com este escopo estarão disponíveis apenas em tempo de execução, mas não em tempo de compilação. Um exemplo de uso: Imagine se você estiver usando o driver MySQL dentro do seu projeto, você pode adicionar a dependência com escopo como tempo de execução, para garantir que a abstração da API JDBC seja usada em vez da API do driver MySQL durante a implementação. Se o código-fonte incluir qualquer classe que faça parte da API JDBC do MySQL, o código não será compilado, pois a dependência não está disponível no momento da compilação;
+- test: as dependências estão disponíveis apenas no momento da execução dos testes, exemplos típicos incluem Junit;
+- system: é semelhante ao escopo provided, mas a única diferença é que precisamos mencionar explicitamente onde a dependência pode ser encontrada no sistema, usando a tag systemPath: <systemPath>${basedir}/lib/some-dependency.jar</systemPath>.
 
 Repositórios:
 As dependências são armazenadas em um diretório especial chamado Repositório. Existem 2 tipos:
