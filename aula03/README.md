@@ -1,6 +1,6 @@
 # Aula 03 - Programação Orientada a Objetos
 
-# Introduzir os conceitos fundamentais de programação orientada a objetos (POO) utilizando a linguagem Java e o ambiente de desenvolvimento BlueJ.
+Introduzir os conceitos fundamentais de programação orientada a objetos (POO) utilizando a linguagem Java e o ambiente de desenvolvimento BlueJ.
 
 - Entender os conceitos fundamentais de POO;
 - Aprender a sintaxe básica de Java com POO;
