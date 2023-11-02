@@ -20,8 +20,7 @@ APIs para Logging:
 - tinylog https://www.tinylog.org/
 - SLF4J https://www.slf4j.org/
 
-- Debugging:
-Possibilita a execução do código linha a linha, facilitando o entendimento e ajudando a encontrar bugs.
+Debugging: Possibilita a execução do código linha a linha, facilitando o entendimento e ajudando a encontrar bugs.
 
 Ferramentas da IDE:
 - Debug (F11): Roda em modo debug;
