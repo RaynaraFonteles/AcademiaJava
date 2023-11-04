@@ -36,4 +36,4 @@ O Wildfly oferece recursos avançados, como clustering e balanceamento de carga,
 Tomcat é ideal para pequenos projetos e aplicativos web simples, como blogs, sites estáticos e aplicativos de uma única página;
 Wildfly é mais apropriado para empresas que desenvolvem aplicativos Java EE que exigem recursos avançados, como escalabilidade, clustering e segurança corporativa;
 
-É apropriado migrar de Tomcat para Wildfly à medida que os requisitos do projeto crescem.+
+- É apropriado migrar de Tomcat para Wildfly à medida que os requisitos do projeto crescem.
