@@ -4,10 +4,10 @@ O que são Servlets?
 A tecnologia Servlet é uma classe Java, que consegue gerar páginas dinâmicas para a camada de apresentação de aplicações web. O principal objetivo é receber chamadas HTTP, sendo processada e devolvida uma resposta para o cliente. Os servlets trabalham juntamente com a tecnologia Java Server Pages (JSP).
 
 Por que usar Servlets?
-● Portabilidade - Os servlets permitem serem movidos para outros aplicações Java e sistemas operacionais;
-● Desempenho - Ao contrário da tecnologia CGI, cada solicitação é gerenciada pelo processo do container;
-● Agilidade - Possui acesso às bibliotecas Java, que ajudam no ciclo do desenvolvimento;
-● Robustez - Pelos servlets serem gerenciados pela JVM, não tem muitos problemas de memória.
+- Portabilidade - Os servlets permitem serem movidos para outros aplicações Java e sistemas operacionais;
+- Desempenho - Ao contrário da tecnologia CGI, cada solicitação é gerenciada pelo processo do container;
+- Agilidade - Possui acesso às bibliotecas Java, que ajudam no ciclo do desenvolvimento;
+- Robustez - Pelos servlets serem gerenciados pela JVM, não tem muitos problemas de memória.
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -25,11 +25,11 @@ O Container trata dos seguintes casos em uma aplicação web, quando envolve ser
 
 Vantagens do Container:
 O Container proporciona uma série de benefícios que são:
-● Suporte para comunicações;
-● Suporte a multithread;
-● Segurança;
-● Suporte ao JSP;
-● Gerenciamento do ciclo de vida.
+- Suporte para comunicações;
+- Suporte a multithread;
+- Segurança;
+- Suporte ao JSP;
+- Gerenciamento do ciclo de vida.
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
