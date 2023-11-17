@@ -16,10 +16,10 @@ O servlet pode ser carregado ou executado através por um servidor web especial,
 
 O que é Servlet Container?
 O Container trata dos seguintes casos em uma aplicação web, quando envolve servlets que são:
-● Criação do servlet ou da nova thread para tratar uma solicitação de resposta;
-● Invocação do método doPost() ou doGet() do servlet;
-● Tratamento do envio das solicitações de requisição e resposta HTTP;
-● Gerenciamento da vida e morte dos recursos do servlet.
+- Criação do servlet ou da nova thread para tratar uma solicitação de resposta;
+- Invocação do método doPost() ou doGet() do servlet;
+- Tratamento do envio das solicitações de requisição e resposta HTTP;
+- Gerenciamento da vida e morte dos recursos do servlet.
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
