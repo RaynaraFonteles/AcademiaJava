@@ -1,15 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.mycompany.introducaojdbc;
 
 import java.sql.SQLException;
 
-/**
- *
- * @author luanv
- */
 public class App {
 
     public static void main(String[] args) throws SQLException {
