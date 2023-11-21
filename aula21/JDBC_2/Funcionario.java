@@ -1,17 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.introducaojdbc;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-/**
- *
- * @author luanv
- */
 public class Funcionario {
     
     private final DB Database = new DB();
@@ -80,7 +72,6 @@ public class Funcionario {
     }
     
     public void setCargo(String cargo){
-        /* IMPLEMENTAR */
     }
     
     public Integer getSalario(){
@@ -100,7 +91,6 @@ public class Funcionario {
     }
     
     public void setSalario(Integer salario){
-        /* IMPLEMENTAR */
     }
     
     /* DEPTO */
@@ -137,7 +127,6 @@ public class Funcionario {
     }
     
     public void setDepartamento(Integer departamento_id){
-        /* IMPLEMENTAR */
     }
     
 }
