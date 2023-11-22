@@ -10,19 +10,25 @@ public class Teste {
 
 	public static void main(String[] args) {
 
-		Ninja naruto = new Ninja("Naruto", 30, "Ninjutsu", "Konoha");
-		Ninja shikamaru = new Ninja("Shikamaru", 28, "Ninjutsu", "Konoha");
+		// CRIAR TRANSAÇÃO NO BANCO DE DADOS
+		//daoNinja.abrir().create(naruto).create(shikamaru).fechar();
 
-		
-		DAO<Ninja> daoNinja = new DAO<>(Ninja.class);
-		daoNinja.atualizar(6, "Itachi", "Genjutsu", "Nenhuma", 32);
+		// CREATE
+		// Ninja naruto = new Ninja("Naruto", 30, "Ninjutsu", "Konoha");
+		// Ninja shikamaru = new Ninja("Shikamaru", 28, "Ninjutsu", "Konoha");
+		// DAO<Ninja> daoNinja = new DAO<>(Ninja.class);
 
-		
-		System.out.println(daoNinja.encontrarPeloId(3));
-		daoNinja.abrir().delete(3).fechar();
+		// READ - GET
+		// DAO<Ninja> daoNinja = new DAO<>(Ninja.class);
+		// System.out.println(daoNinja.encontrarPeloId(6));
 
-		
-		daoNinja.abrir().create(naruto).create(shikamaru).fechar();
+		// DELETE
+		// DAO<Ninja> daoNinja = new DAO<>(Ninja.class);
+		// daoNinja.abrir().delete(6).fechar();
+
+		// UPDATE
+		// DAO<Ninja> daoNinja = new DAO<>(Ninja.class);
+		// daoNinja.atualizar(7, "Itachi", "Genjutsu", "Nenhuma", 32);
 
 	}
 }
