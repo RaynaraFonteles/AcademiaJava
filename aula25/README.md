@@ -28,23 +28,23 @@ Alguns exemplos de starters disponíveis:
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-Spring Boot Autoconfigure
+Spring Boot Autoconfigure:
 Como dito anteriormente o Spring Boot trabalha de forma opinativa, tomando decisões para você. Mas baseado em que? Essas decisões padrões são baseadas através do conteúdo do seu classpath. O Autoconfigure é responsável por ler este conteúdo e realizar as configurações necessárias para que a aplicação funcione. É ele quem gerencia todo o processo de configuração da aplicação.
 
-Spring Boot Actuator
+Spring Boot Actuator:
 O Spring Boot Actuator é uma ferramenta que permite monitorar e gerenciar as aplicações implantadas. Dentre os recursos disponibilizados temos:
 - Métricas: Obtém e disponibiliza diversos dados da nossa aplicação, como por exemplo, espaço em disco, memória, tempo de resposta etc;
 - Logging: Facilita o acesso ao arquivo de log da aplicação por meio de um endpoint específico;
 - HeathlChecks: Disponibiliza endpoints de health checks;
 - Informações da Aplicação: Permite a disponibilização de informações da aplicação. Por exemplo, versão, informações do git, etc.
 
-Spring Boot Test
+Spring Boot Test:
 O Spring Boot Test contém funcionalidades úteis e anotações que facilitam e ajudam a testar sua aplicação.
 
-Spring Boot Devtools
+Spring Boot Devtools:
 Spring Boot Devtools é um conjunto de funcionalidades que ajuda o trabalho de qualquer dev. Como, por exemplo, restart automático da aplicação quando ocorre alguma mudança no código.
 
-Spring Tool Suite
+Spring Tool Suite:
 O Spring nos fornece uma IDE totalmente customizada para o desenvolvimento de aplicações do ecossistema spring: o Spring Tool Suite (STS). O STS é uma IDE baseada em Eclipse que já vem com algumas funcionalidades facilitadoras para projetos Spring. 
 
 -----------------------------------------------------------------------------------------------------------------------------------------
