@@ -29,13 +29,10 @@ public class Conta {
 	private String tipo;
 
 	public String Corrente() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	public String Poupanca() {
-		// TODO Auto-generated method stub
 		return null;
 	}
-
 }
