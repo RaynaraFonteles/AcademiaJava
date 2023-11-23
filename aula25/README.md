@@ -46,9 +46,3 @@ Spring Boot Devtools é um conjunto de funcionalidades que ajuda o trabalho de q
 
 Spring Tool Suite:
 O Spring nos fornece uma IDE totalmente customizada para o desenvolvimento de aplicações do ecossistema spring: o Spring Tool Suite (STS). O STS é uma IDE baseada em Eclipse que já vem com algumas funcionalidades facilitadoras para projetos Spring. 
-
------------------------------------------------------------------------------------------------------------------------------------------
-
-Desafio:
-
-Desenvolva uma aplicação Spring Boot que demonstre o uso de herança em modelos de dados e um endpoint para listar esses objetos. No projeto, modele uma classe base abstrata representando uma entidade genérica e duas subclasses representando especializações dessa entidade. Implemente um endpoint GET na classe principal do projeto que retorne uma lista da classe ABSTRATA que traga os dados das subclasses. Popule as subclasses antes de listar a classe abstrata, o endpoint terá o nome da classe abstrata.
