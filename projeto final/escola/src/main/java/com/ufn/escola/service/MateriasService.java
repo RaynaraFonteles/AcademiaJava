@@ -7,14 +7,14 @@ import com.ufn.escola.model.dto.response.MateriasResponseDTO;
 
 public interface MateriasService {
 
-	List<MateriasResponseDTO> findAll(Long escolaId);
+	List<MateriasResponseDTO> findAll(long escolaId, long turmaId);
 
-	MateriasResponseDTO findById(Long escolaId, Long materiasId);
+	MateriasResponseDTO findById(long escolaId, long turmaId, Long materiaId);
 
-	String create(MateriasRequestDTO materias, long escolaId);
+	String create(MateriasRequestDTO materias, long escolaId, long turmaId);
 
-	MateriasResponseDTO update(MateriasRequestDTO Materias, long escolaId);
+	MateriasResponseDTO update(MateriasRequestDTO Materias, long escolaId, long turmaId);
 
-	void delete(Long id);
+	void delete(long escolaId, long turmaId, Long materiaId);
 
 }

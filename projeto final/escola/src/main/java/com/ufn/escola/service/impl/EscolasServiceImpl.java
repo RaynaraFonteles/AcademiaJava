@@ -46,8 +46,8 @@ public class EscolasServiceImpl implements EscolasService {
 		escola.setEndereco(escolaDTO.getEndereco());
 		escola.setCreateAt(LocalDate.now());
 		escola.setUpdateAt(LocalDate.now());
-		escolaRepository.save(escola);
-		return "Salvo com sucesso!";
+		escola = escolaRepository.save(escola);
+		return String.valueOf(escola.getId());
 	}
 
 	@Override

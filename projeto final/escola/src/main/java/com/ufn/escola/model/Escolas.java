@@ -35,8 +35,6 @@ public class Escolas {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "escola")
 	protected List<Funcionarios> funcionarios;
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "escola")
-	protected List<Alunos> alunos;
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "escola")
 	protected List<Patrimonios> patrimonios;
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "escola")
 	protected List<Turmas> turma;

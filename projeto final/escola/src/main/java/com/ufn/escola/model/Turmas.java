@@ -3,12 +3,14 @@ package com.ufn.escola.model;
 import java.time.LocalDate;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
@@ -38,13 +40,17 @@ public class Turmas {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "turma")
 	private List<Funcionarios> funcionarios;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "turma")
+	@OneToMany(mappedBy="turma")
 	private List<Alunos> alunos;
 	
-	@ManyToMany
+	@ManyToMany(cascade = CascadeType.ALL)
+	@JoinTable(
+			  name = "turmas_materias", 
+			  joinColumns = @JoinColumn(name = "turma_id"), 
+			  inverseJoinColumns = @JoinColumn(name = "materia_id"))
 	private List<Materias> materias;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "escola_id")
 	protected Escolas escola;
 	

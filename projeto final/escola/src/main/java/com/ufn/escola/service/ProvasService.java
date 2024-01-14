@@ -7,14 +7,14 @@ import com.ufn.escola.model.dto.response.ProvasResponseDTO;
 
 public interface ProvasService {
 
-	List<ProvasResponseDTO> findAll(Long escolaId);
+	List<ProvasResponseDTO> findAll(Long materiaId);
 
-	ProvasResponseDTO findById(Long escolaId, Long provasId);
+	ProvasResponseDTO findById(Long materiaId, Long provaId);
 
-	String create(ProvasRequestDTO provas, long escolaId);
+	String create(ProvasRequestDTO provas, long materiaId, long turmaId);
 
-	ProvasResponseDTO update(ProvasRequestDTO provas, long escolaId);
+	ProvasResponseDTO update(ProvasRequestDTO provas, long materiaId, long turmaId);
 
-	void delete(Long id);
+	void delete(Long provaId);
 
 }

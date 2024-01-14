@@ -3,14 +3,17 @@ package com.ufn.escola.model;
 import java.time.LocalDate;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -27,21 +30,24 @@ import lombok.NoArgsConstructor;
 public class Alunos {
 
 	@Id
-	@GeneratedValue(generator="aluno_seq")
-	@SequenceGenerator(name="aluno_seq",sequenceName="ALUNO_SEQ", allocationSize=1)
+	@GeneratedValue(generator = "aluno_seq")
+	@SequenceGenerator(name = "aluno_seq", sequenceName = "ALUNO_SEQ", allocationSize = 1)
 	protected long id;
-	
-	@OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "turma_id")
+
+	@ManyToOne
+    @JoinColumn(name="turma_id", nullable=false)
 	protected Turmas turma;
-	
-	@OneToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "escola_id")
-	protected Escolas escola;
-	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "aluno")
+
+	@OneToMany(fetch = FetchType.EAGER)
+	protected List<Advertencias> advertencia;
+
+	@ManyToMany(cascade = CascadeType.ALL)
+	@JoinTable(
+			  name = "provas_aluno", 
+			  joinColumns = @JoinColumn(name = "aluno_id"), 
+			  inverseJoinColumns = @JoinColumn(name = "provas_id"))
 	protected List<Provas> provas;
-	
+
 	@Column(name = "nome")
 	protected String nome;
 	@Column
@@ -54,6 +60,5 @@ public class Alunos {
 	protected LocalDate updateAt;
 	@Column
 	protected LocalDate deletedAt;
-	
 
 }

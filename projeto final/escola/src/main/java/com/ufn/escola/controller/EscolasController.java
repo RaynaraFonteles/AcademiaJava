@@ -3,7 +3,6 @@ package com.ufn.escola.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,7 +33,6 @@ public class EscolasController {
 	}
 
 	@GetMapping("/{id}")
-	@PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
 	public EscolasResponseDTO findById(@PathVariable(value = "id") @NotNull Long id) {
 		return escolaService.findById(id);
 	}

@@ -13,5 +13,6 @@ public class ProvasRequestDTO {
 
 	private long id;
 	private long notas;
+	private String descricao;
 
 }

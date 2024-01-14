@@ -1,6 +1,7 @@
 package com.ufn.escola.service.impl;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -36,7 +37,7 @@ public class PatrimoniosServiceImpl implements PatrimoniosService {
 			return escola.get().getPatrimonios().stream().map(t -> mapper.map(t, PatrimoniosResponseDTO.class))
 					.toList();
 		}
-		return null;
+		return new ArrayList<>();
 	}
 
 	@Override
@@ -58,9 +59,10 @@ public class PatrimoniosServiceImpl implements PatrimoniosService {
 			patrimonio.setNome(patrimonioDTO.getNome());
 			patrimonio.setStatus(patrimonioDTO.getStatus());
 			patrimonio.setCreateAt(LocalDate.now());
+			patrimonio.setUpdateAt(LocalDate.now());
 			patrimonio.setEscola(escola.get());
-			escola.get().getPatrimonios().add(patrimonioRepository.save(patrimonio));
-			return "Salvo com sucesso";
+			patrimonio = patrimonioRepository.save(patrimonio);
+			return String.valueOf(patrimonio.getId());
 		}
 		return null;
 	}
@@ -72,11 +74,10 @@ public class PatrimoniosServiceImpl implements PatrimoniosService {
 			Patrimonios patrimonio = new Patrimonios();
 			patrimonio.setId(patrimonioDTO.getId());
 			patrimonio.setDescricao(patrimonioDTO.getDescricao());
-			patrimonio.setEscola(escola.get());
 			patrimonio.setNome(patrimonioDTO.getNome());
 			patrimonio.setStatus(patrimonioDTO.getStatus());
 			patrimonio.setCreateAt(LocalDate.now());
-			escola.get().getPatrimonios().add(patrimonioRepository.save(patrimonio));
+			patrimonioRepository.saveAndFlush(patrimonio);
 			return mapper.map(patrimonio, PatrimoniosResponseDTO.class);
 		}
 		return null;

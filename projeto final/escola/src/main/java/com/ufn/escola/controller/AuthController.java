@@ -32,7 +32,7 @@ import com.ufn.escola.service.impl.UserDetailsImpl;
 
 import jakarta.validation.Valid;
 
-@CrossOrigin(origins = "*", maxAge = 3600)
+
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
@@ -51,6 +51,7 @@ public class AuthController {
   @Autowired
   JwtUtils jwtUtils;
 
+  @CrossOrigin(origins = "*", maxAge = 3600)
   @PostMapping("/signin")
   public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
 
@@ -72,6 +73,7 @@ public class AuthController {
                          roles));
   }
 
+  @CrossOrigin(origins = "*", maxAge = 3600)
   @PostMapping("/signup")
   public ResponseEntity<?> registerUser(@Valid @RequestBody SignupRequest signUpRequest) {
     if (userRepository.existsByUsername(signUpRequest.getUsername())) {

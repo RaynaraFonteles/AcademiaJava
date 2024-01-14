@@ -3,7 +3,7 @@ package com.ufn.escola.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,6 +19,7 @@ import com.ufn.escola.service.PatrimoniosService;
 
 import jakarta.validation.constraints.NotNull;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/escolas")
 public class PatrimoniosController {
@@ -26,16 +27,16 @@ public class PatrimoniosController {
 	@Autowired
 	private PatrimoniosService PatrimonioService;
 
+	
 	@GetMapping("/{escola_id}/patrimonio")
 	public List<PatrimoniosResponseDTO> findAll(@PathVariable(value = "escola_id") long escolaId) {
 		return PatrimonioService.findAll(escolaId);
 	}
 
 	@GetMapping("/{escola_id}/patrimonio/{patrimonio_id}")
-	@PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
 	public PatrimoniosResponseDTO findById(@PathVariable(value = "escola_id") @NotNull Long escolaId,
-			@PathVariable(value = "turma_id") Long turmaId) {
-		return PatrimonioService.findById(escolaId, turmaId);
+			@PathVariable(value = "patrimonio_id") Long patrimonioId) {
+		return PatrimonioService.findById(escolaId, patrimonioId);
 	}
 
 	@PostMapping("/{escola_id}/patrimonio")
@@ -52,7 +53,6 @@ public class PatrimoniosController {
 
 	@DeleteMapping("/{escola_id}/patrimonio/{patrimonio_id}")
 	public String delete(@PathVariable(value = "escola_id") @NotNull Long escolaId,
-
 			@PathVariable(value = "patrimonio_id") Long patrimonioId) {
 		try {
 			PatrimonioService.delete(patrimonioId);

@@ -7,13 +7,13 @@ import com.ufn.escola.model.dto.response.AlunosResponseDTO;
 
 public interface AlunosService {
 
-	List<AlunosResponseDTO> findAll(long escolaId);
+	List<AlunosResponseDTO> findAll(long turmaId);
 
-	AlunosResponseDTO findById(Long escolaId, Long alunosId);
+	AlunosResponseDTO findById(Long turmaId, Long alunoId);
 
-	String create(AlunosRequestDTO alunosDTO, Long escolaId);
+	String create(AlunosRequestDTO alunosDTO, Long turmaId);
 
-	AlunosResponseDTO update(AlunosRequestDTO alunos, Long escolaId);
+	AlunosResponseDTO update(AlunosRequestDTO alunos, Long turmaId);
 
 	void delete(Long alunosId);
 

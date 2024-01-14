@@ -3,7 +3,6 @@ package com.ufn.escola.service.impl;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,9 +40,11 @@ public class TurmasServiceImpl implements TurmasService {
 
 	@Override
 	public TurmasResponseDTO findById(Long escolaId, Long turmaId) {
-		Optional<Escolas> escola = escolaRepository.findById(escolaId);
-		if(escola.isPresent()) {
-			return mapper.map(escola.get().getTurma().stream().filter(t -> t.getId() == turmaId).collect(Collectors.toList()).get(0), TurmasResponseDTO.class);
+		Optional<Turmas> turma = turmaRepository.findById(turmaId);
+		if(turma.isPresent()) {
+			
+			return mapper.map(turma.get(), TurmasResponseDTO.class);
+		
 		}
 		return null;
 	}
@@ -55,9 +56,10 @@ public class TurmasServiceImpl implements TurmasService {
 			Turmas turma = new Turmas();
 			turma.setDescricao(turmaDTO.getDescricao());
 			turma.setCreateAt(LocalDate.now());
+			turma.setUpdateAt(LocalDate.now());
 			turma.setEscola(escola.get());
-			escola.get().getTurma().add(turmaRepository.save(turma));
-			return "Salvo com sucesso";
+			turma = turmaRepository.save(turma);
+			return String.valueOf(turma.getId());
 		}
 		return null;
 	}

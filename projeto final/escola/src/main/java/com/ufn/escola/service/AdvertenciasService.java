@@ -7,13 +7,13 @@ import com.ufn.escola.model.dto.response.AdvertenciasResponseDTO;
 
 public interface AdvertenciasService {
 
-	List<AdvertenciasResponseDTO> findAll(Long escolaId);
+	List<AdvertenciasResponseDTO> findAll(Long alunosId);
 
-	AdvertenciasResponseDTO findById(Long escolaId, Long advertenciasId);
+	AdvertenciasResponseDTO findById(Long alunosId, Long advertenciasId);
 
-	String create(AdvertenciasRequestDTO advertencias, long escolaId);
+	String create(AdvertenciasRequestDTO advertencias, long alunosId);
 
-	AdvertenciasResponseDTO update(AdvertenciasRequestDTO advertencias, long escolaId);
+	AdvertenciasResponseDTO update(AdvertenciasRequestDTO advertencias, long alunosId);
 
 	void delete(Long id);
 

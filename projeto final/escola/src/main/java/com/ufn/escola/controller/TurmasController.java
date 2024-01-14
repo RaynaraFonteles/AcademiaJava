@@ -3,7 +3,7 @@ package com.ufn.escola.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,6 +19,7 @@ import com.ufn.escola.service.TurmasService;
 
 import jakarta.validation.constraints.NotNull;
 
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/escolas")
 public class TurmasController {
@@ -26,13 +27,13 @@ public class TurmasController {
 	@Autowired
 	private TurmasService TurmaService;
 
+	
 	@GetMapping("/{escola_id}/turma")
 	public List<TurmasResponseDTO> findAll(@PathVariable(value = "escola_id") long escolaId) {
 		return TurmaService.findAll(escolaId);
 	}
 
 	@GetMapping("/{escola_id}/turma/{turma_id}")
-	@PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
 	public TurmasResponseDTO findById(@PathVariable(value = "escola_id") @NotNull Long escolaId,
 			@PathVariable(value = "turma_id") Long turmaId) {
 		return TurmaService.findById(escolaId, turmaId);

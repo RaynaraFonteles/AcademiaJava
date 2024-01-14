@@ -3,6 +3,7 @@ package com.ufn.escola.model;
 import java.time.LocalDate;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -28,14 +29,15 @@ public class Materias {
 	@Id
 	@GeneratedValue(generator="materia_seq")
 	@SequenceGenerator(name="materia_seq",sequenceName="MATERIA_SEQ", allocationSize=1)
-	protected long id;
+	protected Long id;
+	
 	@Column(name = "materia")
 	protected String materia;
 	@Column
 	protected long tempoSemestre;
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "materia")
 	protected List<Provas> provas;
-	@ManyToMany
+	@ManyToMany(mappedBy = "materias", cascade = CascadeType.ALL)
 	protected List<Turmas> turmas;
 	@Column
 	protected LocalDate createAt;
